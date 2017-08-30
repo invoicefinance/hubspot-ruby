@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"newcompany_y_1504105329@hsgem.com"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '842'
+      Date:
+      - Wed, 30 Aug 2017 15:02:10 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"portalId":62515,"companyId":531484184,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504105330081","timestamp":1504105330081,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504105330081","timestamp":1504105330081,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newcompany_y_1504105329@hsgem.com","timestamp":1504105330081,"source":"API","sourceId":null,"versions":[{"name":"name","value":"newcompany_y_1504105329@hsgem.com","timestamp":1504105330081,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504105330081","timestamp":1504105330081,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504105330081","timestamp":1504105330081,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 15:02:10 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v1/batch-async/update?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '[{"objectId":531484184,"properties":[{"name":"93741290837490812y35lghfa7o45tyglbu","value":"new_name"}]}]'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '356'
+      Date:
+      - Wed, 30 Aug 2017 15:02:10 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Property values were not valid","correlationId":"2ff84be7-1158-4184-a6a7-6f1fd8ed64f1","validationResults":[{"isValid":false,"message":"Property
+        \"93741290837490812y35lghfa7o45tyglbu\" does not exist","error":"PROPERTY_DOESNT_EXIST","name":"93741290837490812y35lghfa7o45tyglbu"}],"requestId":"ecc1f6f31c1cf65d3847cb8b38ebe88d"}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 15:02:10 GMT
+recorded_with: VCR 2.4.0
