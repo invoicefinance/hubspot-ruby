@@ -59,26 +59,30 @@ module Hubspot
         contact
       end
 
-      # NOTE: Performance is best when calls are limited to 100 or fewer contacts
+      # NOTE: It will now handle bigger loads
       # {https://developers.hubspot.com/docs/methods/contacts/batch_create_or_update}
-      def create_or_update!(contacts)
-        query = contacts.map do |ch|
-          contact_hash = ch.with_indifferent_access
-          contact_param = {
-            properties: Hubspot::Utils.hash_to_properties(contact_hash.except(:vid))
-          }
-          if contact_hash[:vid]
-            contact_param.merge!(vid: contact_hash[:vid])
-          elsif contact_hash[:email]
-            contact_param.merge!(email: contact_hash[:email])
-          else
-            raise Hubspot::InvalidParams, 'expecting vid or email for contact'
-          end
-          contact_param
+      def create_or_update!(contacts, batch_size = 50)
+        contacts.in_groups_of(batch_size) do |group_of_contacts|
+          query = group_of_contacts.map do |ch|
+            return nil if ch
+
+            contact_hash = ch.with_indifferent_access
+            contact_param = {
+              properties: Hubspot::Utils.hash_to_properties(contact_hash.except(:vid))
+            }
+            if contact_hash[:vid]
+              contact_param.merge!(vid: contact_hash[:vid])
+            elsif contact_hash[:email]
+              contact_param.merge!(email: contact_hash[:email])
+            else
+              raise Hubspot::InvalidParams, 'expecting vid or email for contact'
+            end
+            contact_param
+          end.reject(&:nil?)
+          Hubspot::Connection.post_json(BATCH_CREATE_OR_UPDATE_PATH,
+                                        params: {},
+                                        body: query)
         end
-        Hubspot::Connection.post_json(BATCH_CREATE_OR_UPDATE_PATH,
-                                      params: {},
-                                      body: query)
       end
 
       # NOTE: problem with batch api endpoint
@@ -140,6 +144,20 @@ module Hubspot
 
         response = Hubspot::Connection.get_json(QUERY_PATH, { q: query, count: count, offset: offset })
         response.merge("contacts" => response["contacts"].map { |contact_hash| new(contact_hash) })
+      end
+
+      # Updates all given companies in batches of 50
+      # {https://developers.hubspot.com/docs/methods/contact/batch-update-companies}
+      # @param params [Hash] of all companies that and properties that need to be updated
+      # @return boolean
+      def batch_update(companies, batch_size = 50)
+        companies.in_groups_of(batch_size) do |group|
+          Hubspot::Connection.post_json(
+            BATCH_UPDATE_PATH,
+            params: {},
+            body: group.reject(&:nil?)
+          )
+        end
       end
     end
 
