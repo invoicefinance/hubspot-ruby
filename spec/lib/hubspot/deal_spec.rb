@@ -34,6 +34,30 @@ describe Hubspot::Deal do
     end
   end
 
+  describe '.all' do
+    cassette 'find_all_deals'
+
+    let(:deal) do
+      Hubspot::Deal.find(18706906)
+    end
+    let(:deal2) do
+      Hubspot::Deal.find(18706976)
+    end
+
+    it 'must be able to find all deals' do
+      deals = Hubspot::Deal.all(recently_updated: false, limit: 2, offset: 1, properties: :amount)
+
+      first = deals.first
+      last = deals.last
+      
+      expect(first).to be_a Hubspot::Deal
+      expect(first.properties['amount']).to eql deal.properties['amount']
+
+      expect(last).to be_a Hubspot::Deal
+      expect(last.properties['amount']).to eql deal2.properties['amount']
+    end
+  end
+
   describe '.recent' do
     cassette 'find_all_recent_updated_deals'
 
