@@ -14,6 +14,7 @@ module Hubspot
     ADD_CONTACT_TO_COMPANY_PATH       = "/companies/v2/companies/:company_id/contacts/:vid"
     DESTROY_COMPANY_PATH              = "/companies/v2/companies/:company_id"
     GET_COMPANY_CONTACTS_PATH         = "/companies/v2/companies/:company_id/contacts"
+    BATCH_UPDATE_PATH                 = "/companies/v1/batch-async/update"
 
     class << self
       # Find all companies by created date (descending)
@@ -78,6 +79,28 @@ module Hubspot
         post_data = {properties: Hubspot::Utils.hash_to_properties(params_with_name, key_name: "name")}
         response = Hubspot::Connection.post_json(CREATE_COMPANY_PATH, params: {}, body: post_data )
         new(response)
+      end
+
+      # Updates all given companies in batches of 50
+      # {https://developers.hubspot.com/docs/methods/companies/batch-update-companies}
+      # @param params [Hash] of all companies that and properties that need to be updated
+      # @return boolean
+      def batch_update!(companies, batch_size = 50)
+        companies.in_groups_of(batch_size) do |group|
+          query = group.compact.map do |deal|
+            deal_hash = deal.with_indifferent_access
+
+            {
+              'objectId' => deal_hash[:vid],
+              'properties' => Hubspot::Utils.hash_to_properties(deal_hash.except(:vid), key_name: 'name')
+            }
+          end
+          Hubspot::Connection.post_json(
+            BATCH_UPDATE_PATH,
+            params: {},
+            body: query
+          )
+        end
       end
     end
 

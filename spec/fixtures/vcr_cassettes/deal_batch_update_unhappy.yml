@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"test"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '784'
+      Date:
+      - Fri, 01 Sep 2017 07:57:59 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"portalId":62515,"companyId":533092239,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504252679376","timestamp":1504252679376,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504252679376","timestamp":1504252679376,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"test","timestamp":1504252679376,"source":"API","sourceId":null,"versions":[{"name":"name","value":"test","timestamp":1504252679376,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504252679376","timestamp":1504252679376,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504252679376","timestamp":1504252679376,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:57:58 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"email","value":"testingapis1504252678@hubspot.com"}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '1365'
+      Date:
+      - Fri, 01 Sep 2017 07:57:59 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4641974,"canonical-vid":4641974,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPqK9gi0HFsJtbIAXWkUclC0QZipRQZNyeTtoAwfVDaNjX1suNzFJfV8WjivsPQETvyEzBicXTftlNeW2GT-K5dgFhoM5GVLZL9QWQSWBCHAFdL1t5GWPUJB5KREPOJfPM4JxQu","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPqK9gi0HFsJtbIAXWkUclC0QZipRQZNyeTtoAwfVDaNjX1suNzFJfV8WjivsPQETvyEzBicXTftlNeW2GT-K5dgFhoM5GVLZL9QWQSWBCHAFdL1t5GWPUJB5KREPOJfPM4JxQu/","properties":{"createdate":{"value":"1504252679745","versions":[{"value":"1504252679745","source-type":"API","source-id":"Contacts","source-label":null,"timestamp":1504252679745,"selected":false}]},"email":{"value":"testingapis1504252678@hubspot.com","versions":[{"value":"testingapis1504252678@hubspot.com","source-type":"API","source-id":null,"source-label":null,"timestamp":1504252679742,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4641974,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"testingapis1504252678@hubspot.com","timestamp":1504252679745,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"0d27bd6c-bd43-4d1a-9c4f-35ee858f02f2","timestamp":1504252679749,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:57:58 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/deals/v1/deal?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"portalId":62515,"associations":{"associatedCompanyIds":[533092239],"associatedVids":[4641974]},"properties":[{"name":"amount","value":30}]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1055'
+      Date:
+      - Fri, 01 Sep 2017 07:58:00 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"portalId":62515,"dealId":187422188,"isDeleted":false,"associations":{"associatedVids":[4641974],"associatedCompanyIds":[533092239],"associatedDealIds":[]},"properties":{"amount":{"value":"30","timestamp":1504252680179,"source":"API","sourceId":null,"versions":[{"name":"amount","value":"30","timestamp":1504252680179,"source":"API","sourceVid":[]}]},"hs_lastmodifieddate":{"value":"1504252680179","timestamp":1504252680179,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504252680179","timestamp":1504252680179,"source":"CALCULATED","sourceVid":[]}]},"hs_createdate":{"value":"1504252680179","timestamp":1504252680179,"source":"API","sourceId":null,"versions":[{"name":"hs_createdate","value":"1504252680179","timestamp":1504252680179,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504252680179","timestamp":1504252680179,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1504252680179","timestamp":1504252680179,"source":"API","sourceVid":[]}]}},"imports":[],"stateChanges":[]}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:57:59 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/deals/v1/batch-async/update?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '[{"objectId":187422188,"properties":[{"name":"a_mount","value":100}]}]'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '300'
+      Date:
+      - Fri, 01 Sep 2017 07:58:00 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Property values were not valid","correlationId":"8bd64d7e-5717-4be2-b35c-f77b8cb5d2e8","validationResults":[{"isValid":false,"message":"Property
+        \"a_mount\" does not exist","error":"PROPERTY_DOESNT_EXIST","name":"a_mount"}],"requestId":"88ba75608f8249adcde9f27fadad3e70"}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:57:59 GMT
+recorded_with: VCR 2.4.0

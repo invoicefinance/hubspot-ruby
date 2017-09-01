@@ -1180,4 +1180,1411 @@ http_interactions:
       string: '{"vid":2984674,"canonical-vid":2984674,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMBepPnDiVhE6gTX7CstNXjSOzzbWb7xstkJ9t2MmL_jfmUSlfZXVzYah7L_3ODS_af99z6B7C0tcHpSHQmfVVPKG7N0Q80qp-yesx4ct73rMMqpyvDaSALVEkgugxr_DiF-GPk","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMBepPnDiVhE6gTX7CstNXjSOzzbWb7xstkJ9t2MmL_jfmUSlfZXVzYah7L_3ODS_af99z6B7C0tcHpSHQmfVVPKG7N0Q80qp-yesx4ct73rMMqpyvDaSALVEkgugxr_DiF-GPk/","properties":{"lastmodifieddate":{"value":"1476969096660","versions":[{"value":"1476969096660","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1476969096660,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1476969096431","versions":[{"value":"1476969096431","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1476969096431,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1476969096431","versions":[{"value":"1476969096431","source-type":"API","source-id":null,"source-label":null,"timestamp":1476969096431,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1476969096431,"selected":false}]},"email":{"value":"newcontact1476969096@hsgem.com","versions":[{"value":"newcontact1476969096@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1476969096431,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":2984674,"saved-at-timestamp":1476969096441,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1476969096@hsgem.com","timestamp":1476969096431},{"type":"LEAD_GUID","value":"9637dd72-db9c-4614-9482-41e00469422d","timestamp":1476969096438}]}],"merge-audits":[]}'
     http_version: 
   recorded_at: Thu, 20 Oct 2016 13:11:36 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504101413@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Wed, 30 Aug 2017 13:56:54 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623374,"isNew":true}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 13:56:54 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4623374/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Aug 2017 13:56:54 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623374,"canonical-vid":4623374,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mM8lPBhbw8awbOnAFd1ZfZ3qCrRJajm21f_QKBFuaju3H1cKT7KtqT85vy_xpCqqs8ic04xjTJRiVNk819UMFxITj2DoXOoqw7AjtVU4esi7nSX_TnWSG8eYVvzTM9X65w7jIIy","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mM8lPBhbw8awbOnAFd1ZfZ3qCrRJajm21f_QKBFuaju3H1cKT7KtqT85vy_xpCqqs8ic04xjTJRiVNk819UMFxITj2DoXOoqw7AjtVU4esi7nSX_TnWSG8eYVvzTM9X65w7jIIy/","properties":{"lastmodifieddate":{"value":"1504101414263","versions":[{"value":"1504101414263","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504101414263,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504101414049","versions":[{"value":"1504101414049","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101414049,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504101414049","versions":[{"value":"1504101414049","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101414049,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101414049,"selected":false}]},"email":{"value":"newcontact1504101413@hsgem.com","versions":[{"value":"newcontact1504101413@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101414049,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4623374,"saved-at-timestamp":1504101414056,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504101413@hsgem.com","timestamp":1504101414049},{"type":"LEAD_GUID","value":"64b16da0-9ba7-41cd-a253-dffcd6986edb","timestamp":1504101414054}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 13:56:54 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504101414@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Wed, 30 Aug 2017 13:56:55 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623424,"isNew":true}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 13:56:55 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4623424/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Aug 2017 13:56:55 GMT
+      Content-Length:
+      - '3476'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623424,"canonical-vid":4623424,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMWIX_s_ASsIBvICzPnrZba-Tliyu4FeG6SMScXd33zILRRcdNZYqDpU_vjX16ohN6jmwbuEWzNKzs4dUcvJELDgiHz-7q_q7IdSKtCP4jR1OAZ0XgVdpXThbo6teH2TEOu-O0U","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMWIX_s_ASsIBvICzPnrZba-Tliyu4FeG6SMScXd33zILRRcdNZYqDpU_vjX16ohN6jmwbuEWzNKzs4dUcvJELDgiHz-7q_q7IdSKtCP4jR1OAZ0XgVdpXThbo6teH2TEOu-O0U/","properties":{"associatedcompanyid":{"value":"281506424","versions":[{"value":"281506424","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504101415130,"selected":false}]},"associatedcompanylastupdated":{"value":"15012936633645799","versions":[{"value":"15012936633645799","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504101415130,"selected":false}]},"lastmodifieddate":{"value":"1504101415178","versions":[{"value":"1504101415178","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504101415178,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504101414939","versions":[{"value":"1504101414939","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101414939,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504101414939","versions":[{"value":"1504101414939","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101414939,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101414939,"selected":false}]},"email":{"value":"newcontact1504101414@hsgem.com","versions":[{"value":"newcontact1504101414@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101414939,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4623424,"saved-at-timestamp":1504101414944,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504101414@hsgem.com","timestamp":1504101414939},{"type":"LEAD_GUID","value":"1df459dc-e8ef-4ae5-a0d7-c80c488970ee","timestamp":1504101414942}]}],"merge-audits":[],"associated-company":{"company-id":281506424,"portal-id":62515,"properties":{"notes_last_updated":{"value":"1486156114632"},"website":{"value":"hsgem.com"},"num_associated_contacts":{"value":"348"},"hs_analytics_first_timestamp":{"value":"1478323235794"},"createdate":{"value":"1485775923982"},"engagements_last_meeting_booked":{"value":""},"hs_analytics_num_visits":{"value":"0"},"first_contact_createdate":{"value":"1478323235794"},"hs_analytics_source":{"value":"OFFLINE"},"hs_lastmodifieddate":{"value":"1504101278639"},"num_contacted_notes":{"value":"1"},"notes_last_contacted":{"value":"1486156224726"},"domain":{"value":"hsgem.com"},"name":{"value":"hsgem.com"},"hs_analytics_num_page_views":{"value":"0"},"hs_analytics_source_data_2":{"value":"contact-upsert"},"hs_analytics_source_data_1":{"value":"API"},"notes_next_activity_date":{"value":""},"num_notes":{"value":"1"}}}}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 13:56:55 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504101821@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Wed, 30 Aug 2017 14:03:42 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623624,"isNew":true}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 14:03:42 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4623624/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Aug 2017 14:03:42 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623624,"canonical-vid":4623624,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNQD8-1r35n1y1-KOt6hu7_WOwEpKgtyGTjVb2mjB4wy03MVcEfYxsjAvk0U-riNFdgX0ZbDeOjYxU90q1iBU_ZeBZYvrKRppmT8smUu7igCs18mRAD3_LITcvPQUKGudx0K4BN","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNQD8-1r35n1y1-KOt6hu7_WOwEpKgtyGTjVb2mjB4wy03MVcEfYxsjAvk0U-riNFdgX0ZbDeOjYxU90q1iBU_ZeBZYvrKRppmT8smUu7igCs18mRAD3_LITcvPQUKGudx0K4BN/","properties":{"lastmodifieddate":{"value":"1504101821995","versions":[{"value":"1504101821995","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504101821995,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504101821845","versions":[{"value":"1504101821845","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101821845,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504101821845","versions":[{"value":"1504101821845","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101821845,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101821845,"selected":false}]},"email":{"value":"newcontact1504101821@hsgem.com","versions":[{"value":"newcontact1504101821@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101821845,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4623624,"saved-at-timestamp":1504101821851,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504101821@hsgem.com","timestamp":1504101821845},{"type":"LEAD_GUID","value":"042d8043-a07b-438a-9205-c9bfcd01a266","timestamp":1504101821848}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 14:03:42 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504101822@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Wed, 30 Aug 2017 14:03:42 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623674,"isNew":true}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 14:03:42 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4623674/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Aug 2017 14:03:43 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4623674,"canonical-vid":4623674,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPAlpxgAQV-TnRI7U_hxdE4Yq7epKu0L-8F2on2WZRh4IB4V9nqZ5As1Pw6sAoaG6MFm2CKKSJyo4w4YdC52Xm792SmF9scetqHRfEAw9XIeejwJuBfVzfE5giwra-x3POvYBoa","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPAlpxgAQV-TnRI7U_hxdE4Yq7epKu0L-8F2on2WZRh4IB4V9nqZ5As1Pw6sAoaG6MFm2CKKSJyo4w4YdC52Xm792SmF9scetqHRfEAw9XIeejwJuBfVzfE5giwra-x3POvYBoa/","properties":{"lastmodifieddate":{"value":"1504101822708","versions":[{"value":"1504101822708","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504101822708,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504101822641","versions":[{"value":"1504101822641","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101822641,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504101822641","versions":[{"value":"1504101822641","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101822641,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504101822641,"selected":false}]},"email":{"value":"newcontact1504101822@hsgem.com","versions":[{"value":"newcontact1504101822@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504101822641,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4623674,"saved-at-timestamp":1504101822646,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504101822@hsgem.com","timestamp":1504101822641},{"type":"LEAD_GUID","value":"7671e27e-1220-462d-8973-4fd4d43df564","timestamp":1504101822644}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Wed, 30 Aug 2017 14:03:43 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504170619@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 09:10:21 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4630124,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 09:10:19 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4630124/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 09:10:22 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4630124,"canonical-vid":4630124,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOL6y6A_uhQdeA7NDTE3VOqtPt7VXjOgSI3l3o3O-XZpsNI_uBHp5XuaF-ZcV_sigOCwuz3mSYkAGXGYcbaMOzmVUnBVWAMoNDbEhzL1taDF87QtozBakrPHC4BmDMALK9RU_OU","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOL6y6A_uhQdeA7NDTE3VOqtPt7VXjOgSI3l3o3O-XZpsNI_uBHp5XuaF-ZcV_sigOCwuz3mSYkAGXGYcbaMOzmVUnBVWAMoNDbEhzL1taDF87QtozBakrPHC4BmDMALK9RU_OU/","properties":{"lastmodifieddate":{"value":"1504170621863","versions":[{"value":"1504170621863","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504170621863,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504170621763","versions":[{"value":"1504170621763","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504170621763,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504170621763","versions":[{"value":"1504170621763","source-type":"API","source-id":null,"source-label":null,"timestamp":1504170621763,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504170621763,"selected":false}]},"email":{"value":"newcontact1504170619@hsgem.com","versions":[{"value":"newcontact1504170619@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504170621763,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4630124,"saved-at-timestamp":1504170621819,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504170619@hsgem.com","timestamp":1504170621763},{"type":"LEAD_GUID","value":"0470bd63-da50-416c-809e-bccca1cecd2c","timestamp":1504170621817}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 09:10:20 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504170620@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 09:10:22 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4630174,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 09:10:20 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4630174/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 09:10:22 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4630174,"canonical-vid":4630174,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNoOn-N4ioUY6YoYTMLheGFISLSdWdeulOYQAsFix0k_ui-T93DjUwjOIwEL-Oa057i5Zft8JAzA1nNxTT79FwIn9Fn-ssfP9mXkKYgH5wqSIOQNkvpz1e02Km7mATiGAYXO1pB","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNoOn-N4ioUY6YoYTMLheGFISLSdWdeulOYQAsFix0k_ui-T93DjUwjOIwEL-Oa057i5Zft8JAzA1nNxTT79FwIn9Fn-ssfP9mXkKYgH5wqSIOQNkvpz1e02Km7mATiGAYXO1pB/","properties":{"lastmodifieddate":{"value":"1504170622465","versions":[{"value":"1504170622465","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504170622465,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504170622406","versions":[{"value":"1504170622406","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504170622406,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504170622406","versions":[{"value":"1504170622406","source-type":"API","source-id":null,"source-label":null,"timestamp":1504170622406,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504170622406,"selected":false}]},"email":{"value":"newcontact1504170620@hsgem.com","versions":[{"value":"newcontact1504170620@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504170622406,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4630174,"saved-at-timestamp":1504170622415,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504170620@hsgem.com","timestamp":1504170622406},{"type":"LEAD_GUID","value":"a4bb2036-8ada-4d76-803d-d9855a51f88f","timestamp":1504170622411}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 09:10:20 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504178998@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 11:29:59 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4631724,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 11:29:59 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4631724/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 11:29:59 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4631724,"canonical-vid":4631724,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPCmiINLZ3FKoxbUmQL1Zl22ZNrvI3PLVCiOaGPCd9VMZp6R8hh28uGcgfihqnGwp3szkbrR0ycflFM9DmnWb4CoJ4V0Pjz5lX2RPUvY9DsfoNEBZNDLR3B4FRZzPyrT_UucseN","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPCmiINLZ3FKoxbUmQL1Zl22ZNrvI3PLVCiOaGPCd9VMZp6R8hh28uGcgfihqnGwp3szkbrR0ycflFM9DmnWb4CoJ4V0Pjz5lX2RPUvY9DsfoNEBZNDLR3B4FRZzPyrT_UucseN/","properties":{"lastmodifieddate":{"value":"1504178999102","versions":[{"value":"1504178999102","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504178999102,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504178999049","versions":[{"value":"1504178999049","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504178999049,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504178999049","versions":[{"value":"1504178999049","source-type":"API","source-id":null,"source-label":null,"timestamp":1504178999049,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504178999049,"selected":false}]},"email":{"value":"newcontact1504178998@hsgem.com","versions":[{"value":"newcontact1504178998@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504178999049,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4631724,"saved-at-timestamp":1504178999057,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504178998@hsgem.com","timestamp":1504178999049},{"type":"LEAD_GUID","value":"13a3c467-70c7-4f1e-8839-2d8aa9f15fa9","timestamp":1504178999054}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 11:29:59 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504178999@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 11:29:59 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4631774,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 11:29:59 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4631774/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 11:30:00 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4631774,"canonical-vid":4631774,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mN_NyQUByHi5IqYwRMgX5DEt7bqBlH10K_VWfCtzj5z53mj1KOqFwOqJOUpxMqgYAa035qp_P0ymxa9GW9xdkjQHdFoJxm36eMPOT3-26xr8VFT8DIcYIIwgpYefIzsnsoOShR2","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mN_NyQUByHi5IqYwRMgX5DEt7bqBlH10K_VWfCtzj5z53mj1KOqFwOqJOUpxMqgYAa035qp_P0ymxa9GW9xdkjQHdFoJxm36eMPOT3-26xr8VFT8DIcYIIwgpYefIzsnsoOShR2/","properties":{"lastmodifieddate":{"value":"1504178999669","versions":[{"value":"1504178999669","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504178999669,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504178999612","versions":[{"value":"1504178999612","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504178999612,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504178999612","versions":[{"value":"1504178999612","source-type":"API","source-id":null,"source-label":null,"timestamp":1504178999612,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504178999612,"selected":false}]},"email":{"value":"newcontact1504178999@hsgem.com","versions":[{"value":"newcontact1504178999@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504178999612,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4631774,"saved-at-timestamp":1504178999619,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504178999@hsgem.com","timestamp":1504178999612},{"type":"LEAD_GUID","value":"4fe09ae6-19d1-4f27-80d0-7c4aadf57419","timestamp":1504178999617}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 11:30:00 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504182579@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 12:29:40 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632124,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:29:40 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4632124/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 12:29:40 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632124,"canonical-vid":4632124,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mP3L0t9xI6EcASOPr0C2rzQXjBXCM4vWT3qHdyaTZH-naI_GwV2ohlroD_rAdbVk0ssn0dxLEy99t39uSVed7UWZhWHN3pamzx2wKtZ4DTznuPcw5cYHaLirgTLAR1Z5jvpQol2","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mP3L0t9xI6EcASOPr0C2rzQXjBXCM4vWT3qHdyaTZH-naI_GwV2ohlroD_rAdbVk0ssn0dxLEy99t39uSVed7UWZhWHN3pamzx2wKtZ4DTznuPcw5cYHaLirgTLAR1Z5jvpQol2/","properties":{"lastmodifieddate":{"value":"1504182580230","versions":[{"value":"1504182580230","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504182580230,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504182580165","versions":[{"value":"1504182580165","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182580165,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504182580165","versions":[{"value":"1504182580165","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182580165,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182580165,"selected":false}]},"email":{"value":"newcontact1504182579@hsgem.com","versions":[{"value":"newcontact1504182579@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182580165,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4632124,"saved-at-timestamp":1504182580172,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504182579@hsgem.com","timestamp":1504182580165},{"type":"LEAD_GUID","value":"089230a1-926d-4bc4-9afd-2c3b2ec0297b","timestamp":1504182580169}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:29:40 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504182580@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 12:29:40 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632174,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:29:40 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4632174/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 12:29:41 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632174,"canonical-vid":4632174,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mO8IMcEcWA5X7S8JH-F4pjxbjZYQXWv7DfOuTU4bR2JHPCF55z98bEoTztXiC0zMFimXqnpyzGZ5iDJk6HUSfOxjE0BmWrrR9q4z7CqtvXiSzSOb87FqlfGao2cWfc0yAPt84Hu","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mO8IMcEcWA5X7S8JH-F4pjxbjZYQXWv7DfOuTU4bR2JHPCF55z98bEoTztXiC0zMFimXqnpyzGZ5iDJk6HUSfOxjE0BmWrrR9q4z7CqtvXiSzSOb87FqlfGao2cWfc0yAPt84Hu/","properties":{"lastmodifieddate":{"value":"1504182580790","versions":[{"value":"1504182580790","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504182580790,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504182580732","versions":[{"value":"1504182580732","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182580732,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504182580732","versions":[{"value":"1504182580732","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182580732,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182580732,"selected":false}]},"email":{"value":"newcontact1504182580@hsgem.com","versions":[{"value":"newcontact1504182580@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182580732,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4632174,"saved-at-timestamp":1504182580739,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504182580@hsgem.com","timestamp":1504182580732},{"type":"LEAD_GUID","value":"90227756-6970-475e-9f9f-42df850faa7c","timestamp":1504182580736}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:29:41 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504182664@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 12:31:04 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632274,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:31:04 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4632274/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 12:31:04 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632274,"canonical-vid":4632274,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNeUPsS-b4XzfbNRcb6WRohVqC64ehSK87lzRn05CFVJiWXgmoHOBtWvTrjVxllI3mwA0yXojuXp-hLSMntBkvh6d_JKvKzZLe9ErsThDbwmPinv51Pt2LvXmsQRmsPtFs_bryv","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNeUPsS-b4XzfbNRcb6WRohVqC64ehSK87lzRn05CFVJiWXgmoHOBtWvTrjVxllI3mwA0yXojuXp-hLSMntBkvh6d_JKvKzZLe9ErsThDbwmPinv51Pt2LvXmsQRmsPtFs_bryv/","properties":{"lastmodifieddate":{"value":"1504182664325","versions":[{"value":"1504182664325","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504182664325,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504182664261","versions":[{"value":"1504182664261","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182664261,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504182664261","versions":[{"value":"1504182664261","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182664261,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504182664261,"selected":false}]},"email":{"value":"newcontact1504182664@hsgem.com","versions":[{"value":"newcontact1504182664@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504182664261,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4632274,"saved-at-timestamp":1504182664268,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504182664@hsgem.com","timestamp":1504182664261},{"type":"LEAD_GUID","value":"d2d4a4ef-2a4c-46e0-a96e-24623d9921ab","timestamp":1504182664266}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 12:31:04 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504187286@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 13:48:06 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632974,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 13:48:06 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4632974/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 13:48:07 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4632974,"canonical-vid":4632974,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPKz4R1y-pT9TLe0lSfUJrLA7eW_xV3NZtuFCR5FWVq5SRYgc9TXaW6yKr7kAU9TCy6TCECwEU5o9lJmmOrACjxdup6eCltuVlHbUOzDMtffm2MBNZmgg9TvZA4zwcH_1Ua3-XN","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPKz4R1y-pT9TLe0lSfUJrLA7eW_xV3NZtuFCR5FWVq5SRYgc9TXaW6yKr7kAU9TCy6TCECwEU5o9lJmmOrACjxdup6eCltuVlHbUOzDMtffm2MBNZmgg9TvZA4zwcH_1Ua3-XN/","properties":{"lastmodifieddate":{"value":"1504187286799","versions":[{"value":"1504187286799","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504187286799,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504187286678","versions":[{"value":"1504187286678","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504187286678,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504187286678","versions":[{"value":"1504187286678","source-type":"API","source-id":null,"source-label":null,"timestamp":1504187286678,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504187286678,"selected":false}]},"email":{"value":"newcontact1504187286@hsgem.com","versions":[{"value":"newcontact1504187286@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504187286678,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4632974,"saved-at-timestamp":1504187286684,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504187286@hsgem.com","timestamp":1504187286678},{"type":"LEAD_GUID","value":"8a275dcc-7e18-4062-aa03-6b58f3ac65f1","timestamp":1504187286682}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 13:48:07 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504187287@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 13:48:07 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4633024,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 13:48:07 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4633024/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 13:48:07 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4633024,"canonical-vid":4633024,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOPNzAKs5htxY5ALUMdBx1BJ2n5wurT6SjBwzogC1m3mmJgPo3YhFEWkkwNswkpgRlHLl1CVDeLDmqmMZTXBj2p0zcm9ze05eb94X0qnrYbWZpaZjKBDF-whuI2Y2sdReE4S8nv","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOPNzAKs5htxY5ALUMdBx1BJ2n5wurT6SjBwzogC1m3mmJgPo3YhFEWkkwNswkpgRlHLl1CVDeLDmqmMZTXBj2p0zcm9ze05eb94X0qnrYbWZpaZjKBDF-whuI2Y2sdReE4S8nv/","properties":{"lastmodifieddate":{"value":"1504187287440","versions":[{"value":"1504187287440","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504187287440,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504187287379","versions":[{"value":"1504187287379","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504187287379,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504187287379","versions":[{"value":"1504187287379","source-type":"API","source-id":null,"source-label":null,"timestamp":1504187287379,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504187287379,"selected":false}]},"email":{"value":"newcontact1504187287@hsgem.com","versions":[{"value":"newcontact1504187287@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504187287379,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4633024,"saved-at-timestamp":1504187287388,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504187287@hsgem.com","timestamp":1504187287379},{"type":"LEAD_GUID","value":"7d581f35-cb0b-40de-b4a4-47452c66ec70","timestamp":1504187287385}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 13:48:07 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504190585@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 14:43:05 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4634224,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 14:43:05 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4634224/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 14:43:06 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4634224,"canonical-vid":4634224,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNXW06QHTdnc7yxr5co56Gx3n-WpSB6uJrZAQ9Gt_E1SRyrXypz0oAVUx5mRX6D4DJpcKhGUngBGoj1M-auMy7i3SJz0ffwS8UxE8VA8dfECR6lBtSyIOUNZVmROqQUU8ImssM3","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNXW06QHTdnc7yxr5co56Gx3n-WpSB6uJrZAQ9Gt_E1SRyrXypz0oAVUx5mRX6D4DJpcKhGUngBGoj1M-auMy7i3SJz0ffwS8UxE8VA8dfECR6lBtSyIOUNZVmROqQUU8ImssM3/","properties":{"lastmodifieddate":{"value":"1504190585676","versions":[{"value":"1504190585676","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504190585676,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504190585616","versions":[{"value":"1504190585616","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504190585616,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504190585616","versions":[{"value":"1504190585616","source-type":"API","source-id":null,"source-label":null,"timestamp":1504190585616,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504190585616,"selected":false}]},"email":{"value":"newcontact1504190585@hsgem.com","versions":[{"value":"newcontact1504190585@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504190585616,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4634224,"saved-at-timestamp":1504190585623,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504190585@hsgem.com","timestamp":1504190585616},{"type":"LEAD_GUID","value":"df956aad-d1f6-43ab-9ae8-67a4ef919047","timestamp":1504190585620}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 14:43:06 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504190586@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Thu, 31 Aug 2017 14:43:06 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4634274,"isNew":true}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 14:43:06 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4634274/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 31 Aug 2017 14:43:06 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4634274,"canonical-vid":4634274,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMgbudd08zIaTBI0bzSHPweiWQUbK_QB5_06GVkXCPc9NFUiHIoz3Tp_QYVlXPIBIH3E-ZRB-txyqJ_UGmj8yXaZZC_dpn82QclFZc9BHUEWjtxdPKEnKDmR_PIYyz-fPX0ORLQ","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMgbudd08zIaTBI0bzSHPweiWQUbK_QB5_06GVkXCPc9NFUiHIoz3Tp_QYVlXPIBIH3E-ZRB-txyqJ_UGmj8yXaZZC_dpn82QclFZc9BHUEWjtxdPKEnKDmR_PIYyz-fPX0ORLQ/","properties":{"lastmodifieddate":{"value":"1504190586484","versions":[{"value":"1504190586484","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504190586484,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504190586385","versions":[{"value":"1504190586385","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504190586385,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504190586385","versions":[{"value":"1504190586385","source-type":"API","source-id":null,"source-label":null,"timestamp":1504190586385,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504190586385,"selected":false}]},"email":{"value":"newcontact1504190586@hsgem.com","versions":[{"value":"newcontact1504190586@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504190586385,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4634274,"saved-at-timestamp":1504190586392,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504190586@hsgem.com","timestamp":1504190586385},{"type":"LEAD_GUID","value":"596017f2-cefa-4e18-bf0a-ad1ec3e47ac4","timestamp":1504190586388}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Thu, 31 Aug 2017 14:43:06 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504251513@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 07:38:34 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4641124,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:38:33 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4641124/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 07:38:35 GMT
+      Content-Length:
+      - '3476'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4641124,"canonical-vid":4641124,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMXTwO4JH3mDEML30_ak_qKVsgHrKqM-5mrn4GBJU9SRbwxdJI-EyuEeVKYWRdlvq9h3RwoIE_rD2UStrDYWp1Fq_L6YpqkZZQj4DSIO41W5EzySAz6mMSUshSAgNFBN85YCax5","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMXTwO4JH3mDEML30_ak_qKVsgHrKqM-5mrn4GBJU9SRbwxdJI-EyuEeVKYWRdlvq9h3RwoIE_rD2UStrDYWp1Fq_L6YpqkZZQj4DSIO41W5EzySAz6mMSUshSAgNFBN85YCax5/","properties":{"associatedcompanyid":{"value":"281506424","versions":[{"value":"281506424","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504251515061,"selected":false}]},"associatedcompanylastupdated":{"value":"11124259893633487","versions":[{"value":"11124259893633487","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504251515061,"selected":false}]},"lastmodifieddate":{"value":"1504251515093","versions":[{"value":"1504251515093","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504251515093,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504251514836","versions":[{"value":"1504251514836","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504251514836,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504251514836","versions":[{"value":"1504251514836","source-type":"API","source-id":null,"source-label":null,"timestamp":1504251514836,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504251514836,"selected":false}]},"email":{"value":"newcontact1504251513@hsgem.com","versions":[{"value":"newcontact1504251513@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504251514836,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4641124,"saved-at-timestamp":1504251514844,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504251513@hsgem.com","timestamp":1504251514836},{"type":"LEAD_GUID","value":"cc53a4a1-1e47-4367-a995-166ddc9c02cb","timestamp":1504251514841}]}],"merge-audits":[],"associated-company":{"company-id":281506424,"portal-id":62515,"properties":{"notes_last_updated":{"value":"1486156114632"},"website":{"value":"hsgem.com"},"num_associated_contacts":{"value":"375"},"hs_analytics_first_timestamp":{"value":"1478323235794"},"createdate":{"value":"1485775923982"},"engagements_last_meeting_booked":{"value":""},"hs_analytics_num_visits":{"value":"0"},"first_contact_createdate":{"value":"1478323235794"},"hs_analytics_source":{"value":"OFFLINE"},"hs_lastmodifieddate":{"value":"1504190626473"},"num_contacted_notes":{"value":"1"},"notes_last_contacted":{"value":"1486156224726"},"domain":{"value":"hsgem.com"},"name":{"value":"hsgem.com"},"hs_analytics_num_page_views":{"value":"0"},"hs_analytics_source_data_2":{"value":"contact-upsert"},"hs_analytics_source_data_1":{"value":"API"},"notes_next_activity_date":{"value":""},"num_notes":{"value":"1"}}}}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:38:34 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504251514@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 07:38:35 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4641174,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:38:34 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4641174/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 07:38:36 GMT
+      Content-Length:
+      - '3476'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4641174,"canonical-vid":4641174,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMyb6t_0I7pnshK9gQk24dI77yn75e1ytsc3PmHBrPcHl-DucR5Zt-j-pIxu8f-ALX1VTL2C6rmylWOjj5AO_Z_qXq-4xKB6CxHEDq_r5lSJSwxLiRFge-6Wc5Gbvr_yFUyAQE4","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMyb6t_0I7pnshK9gQk24dI77yn75e1ytsc3PmHBrPcHl-DucR5Zt-j-pIxu8f-ALX1VTL2C6rmylWOjj5AO_Z_qXq-4xKB6CxHEDq_r5lSJSwxLiRFge-6Wc5Gbvr_yFUyAQE4/","properties":{"associatedcompanyid":{"value":"281506424","versions":[{"value":"281506424","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504251515914,"selected":false}]},"associatedcompanylastupdated":{"value":"11124260744953256","versions":[{"value":"11124260744953256","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504251515914,"selected":false}]},"lastmodifieddate":{"value":"1504251515953","versions":[{"value":"1504251515953","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504251515953,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504251515618","versions":[{"value":"1504251515618","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504251515618,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504251515618","versions":[{"value":"1504251515618","source-type":"API","source-id":null,"source-label":null,"timestamp":1504251515618,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504251515618,"selected":false}]},"email":{"value":"newcontact1504251514@hsgem.com","versions":[{"value":"newcontact1504251514@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504251515618,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4641174,"saved-at-timestamp":1504251515625,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504251514@hsgem.com","timestamp":1504251515618},{"type":"LEAD_GUID","value":"fc661d57-6f08-4363-91e5-da9910289b64","timestamp":1504251515622}]}],"merge-audits":[],"associated-company":{"company-id":281506424,"portal-id":62515,"properties":{"notes_last_updated":{"value":"1486156114632"},"website":{"value":"hsgem.com"},"num_associated_contacts":{"value":"376"},"hs_analytics_first_timestamp":{"value":"1478323235794"},"createdate":{"value":"1485775923982"},"engagements_last_meeting_booked":{"value":""},"hs_analytics_num_visits":{"value":"0"},"first_contact_createdate":{"value":"1478323235794"},"hs_analytics_source":{"value":"OFFLINE"},"hs_lastmodifieddate":{"value":"1504251515471"},"num_contacted_notes":{"value":"1"},"notes_last_contacted":{"value":"1486156224726"},"domain":{"value":"hsgem.com"},"name":{"value":"hsgem.com"},"hs_analytics_num_page_views":{"value":"0"},"hs_analytics_source_data_2":{"value":"contact-upsert"},"hs_analytics_source_data_1":{"value":"API"},"notes_next_activity_date":{"value":""},"num_notes":{"value":"1"}}}}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 07:38:34 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504254007@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 08:20:09 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642074,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:20:08 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4642074/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 08:20:09 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642074,"canonical-vid":4642074,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mN4dIaAYI4KPJQCDqXEJfE0outQlO9cgaljXwxTmWn2uFCtLvowB5pb_oEgKjjFb3d_9Hw-fyvlZuB4Jul-Ux2ZlR4xxelTTynN6pdgWnA3rmO48-HK-ENPREKEA08h2N6JsVjs","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mN4dIaAYI4KPJQCDqXEJfE0outQlO9cgaljXwxTmWn2uFCtLvowB5pb_oEgKjjFb3d_9Hw-fyvlZuB4Jul-Ux2ZlR4xxelTTynN6pdgWnA3rmO48-HK-ENPREKEA08h2N6JsVjs/","properties":{"lastmodifieddate":{"value":"1504254009224","versions":[{"value":"1504254009224","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504254009224,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504254009054","versions":[{"value":"1504254009054","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254009054,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504254009054","versions":[{"value":"1504254009054","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254009054,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254009054,"selected":false}]},"email":{"value":"newcontact1504254007@hsgem.com","versions":[{"value":"newcontact1504254007@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254009054,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4642074,"saved-at-timestamp":1504254009104,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504254007@hsgem.com","timestamp":1504254009054},{"type":"LEAD_GUID","value":"332b14e0-1364-40c1-bf14-47eb504fc103","timestamp":1504254009102}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:20:08 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504254008@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 08:20:09 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642124,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:20:08 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4642124/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 08:20:10 GMT
+      Content-Length:
+      - '3476'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642124,"canonical-vid":4642124,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNPVDzi1LahsRTowl4xnAwptj9YEJbKFQfctPt1GhACZdu_USc9OnkZZwIF5_Olk4VOXZNqiFY63gUuFZzG2lsfPXaaSiaYJxaxBnRaSDs4JKByw5PN06ClRXuaPLsugINguWQo","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNPVDzi1LahsRTowl4xnAwptj9YEJbKFQfctPt1GhACZdu_USc9OnkZZwIF5_Olk4VOXZNqiFY63gUuFZzG2lsfPXaaSiaYJxaxBnRaSDs4JKByw5PN06ClRXuaPLsugINguWQo/","properties":{"associatedcompanyid":{"value":"281506424","versions":[{"value":"281506424","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504254010061,"selected":false}]},"associatedcompanylastupdated":{"value":"11126754893734209","versions":[{"value":"11126754893734209","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504254010061,"selected":false}]},"lastmodifieddate":{"value":"1504254010078","versions":[{"value":"1504254010078","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504254010078,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504254009846","versions":[{"value":"1504254009846","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254009846,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504254009846","versions":[{"value":"1504254009846","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254009846,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254009846,"selected":false}]},"email":{"value":"newcontact1504254008@hsgem.com","versions":[{"value":"newcontact1504254008@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254009846,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4642124,"saved-at-timestamp":1504254009855,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504254008@hsgem.com","timestamp":1504254009846},{"type":"LEAD_GUID","value":"ad8c8b91-de09-4674-be1b-49aaf17b9d62","timestamp":1504254009852}]}],"merge-audits":[],"associated-company":{"company-id":281506424,"portal-id":62515,"properties":{"notes_last_updated":{"value":"1486156114632"},"website":{"value":"hsgem.com"},"num_associated_contacts":{"value":"381"},"hs_analytics_first_timestamp":{"value":"1478323235794"},"createdate":{"value":"1485775923982"},"engagements_last_meeting_booked":{"value":""},"hs_analytics_num_visits":{"value":"0"},"first_contact_createdate":{"value":"1478323235794"},"hs_analytics_source":{"value":"OFFLINE"},"hs_lastmodifieddate":{"value":"1504254010189"},"num_contacted_notes":{"value":"1"},"notes_last_contacted":{"value":"1486156224726"},"domain":{"value":"hsgem.com"},"name":{"value":"hsgem.com"},"hs_analytics_num_page_views":{"value":"0"},"hs_analytics_source_data_2":{"value":"contact-upsert"},"hs_analytics_source_data_1":{"value":"API"},"notes_next_activity_date":{"value":""},"num_notes":{"value":"1"}}}}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:20:09 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504254846@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 08:34:08 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642424,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:34:07 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4642424/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 08:34:08 GMT
+      Content-Length:
+      - '2147'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642424,"canonical-vid":4642424,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mM7XN7JF0DESVa6Ya0LudVnjw17HjJoTNQHB3JCdFRK1fXXAkO6PRYEV_hR798o2NYaBto4GqaHG2U4FsV0UzmQps-1IpOtJ3NkWQeBiZQMguTzOestGpMAVBvnVQdVRafrDuoN","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mM7XN7JF0DESVa6Ya0LudVnjw17HjJoTNQHB3JCdFRK1fXXAkO6PRYEV_hR798o2NYaBto4GqaHG2U4FsV0UzmQps-1IpOtJ3NkWQeBiZQMguTzOestGpMAVBvnVQdVRafrDuoN/","properties":{"lastmodifieddate":{"value":"1504254848484","versions":[{"value":"1504254848484","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504254848484,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504254848397","versions":[{"value":"1504254848397","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254848397,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504254848397","versions":[{"value":"1504254848397","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254848397,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254848397,"selected":false}]},"email":{"value":"newcontact1504254846@hsgem.com","versions":[{"value":"newcontact1504254846@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254848397,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4642424,"saved-at-timestamp":1504254848438,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504254846@hsgem.com","timestamp":1504254848397},{"type":"LEAD_GUID","value":"878e95ab-91ff-4986-b848-319eb4860c9e","timestamp":1504254848434}]}],"merge-audits":[]}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:34:07 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/newcontact1504254847@hsgem.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"properties":[]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Content-Length:
+      - '28'
+      Date:
+      - Fri, 01 Sep 2017 08:34:09 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642474,"isNew":true}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:34:08 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/4642474/profile?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 01 Sep 2017 08:34:09 GMT
+      Content-Length:
+      - '3476'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":4642474,"canonical-vid":4642474,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMd8mx9RbJJYfaqetBTzfBn06nhK1SohEsizfVYzfKvzaXuM-uYx427QplipadyIzR-E4iskRENfFLAfIFaVym9oBmftBmJDWriUuEkFQBhXxeri6Lr37wySFI-AOpgobninfBT","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMd8mx9RbJJYfaqetBTzfBn06nhK1SohEsizfVYzfKvzaXuM-uYx427QplipadyIzR-E4iskRENfFLAfIFaVym9oBmftBmJDWriUuEkFQBhXxeri6Lr37wySFI-AOpgobninfBT/","properties":{"associatedcompanyid":{"value":"281506424","versions":[{"value":"281506424","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504254849585,"selected":false}]},"associatedcompanylastupdated":{"value":"11127594415715690","versions":[{"value":"11127594415715690","source-type":"COMPANIES","source-id":"WriteAssociatedCompanyIdStep","source-label":null,"timestamp":1504254849585,"selected":false}]},"lastmodifieddate":{"value":"1504254849615","versions":[{"value":"1504254849615","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":1504254849615,"selected":false}]},"num_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"num_unique_conversion_events":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":null,"source-label":null,"timestamp":0,"selected":false}]},"createdate":{"value":"1504254849217","versions":[{"value":"1504254849217","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254849217,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1504254849217","versions":[{"value":"1504254849217","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254849217,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"timestamp":1504254849217,"selected":false}]},"email":{"value":"newcontact1504254847@hsgem.com","versions":[{"value":"newcontact1504254847@hsgem.com","source-type":"API","source-id":"contact-upsert","source-label":null,"timestamp":1504254849217,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4642474,"saved-at-timestamp":1504254849225,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"newcontact1504254847@hsgem.com","timestamp":1504254849217},{"type":"LEAD_GUID","value":"7e0f67c8-88c5-4429-b53d-82f6bfe1dc97","timestamp":1504254849222}]}],"merge-audits":[],"associated-company":{"company-id":281506424,"portal-id":62515,"properties":{"notes_last_updated":{"value":"1486156114632"},"website":{"value":"hsgem.com"},"num_associated_contacts":{"value":"383"},"hs_analytics_first_timestamp":{"value":"1478323235794"},"createdate":{"value":"1485775923982"},"engagements_last_meeting_booked":{"value":""},"hs_analytics_num_visits":{"value":"0"},"first_contact_createdate":{"value":"1478323235794"},"hs_analytics_source":{"value":"OFFLINE"},"hs_lastmodifieddate":{"value":"1504254849204"},"num_contacted_notes":{"value":"1"},"notes_last_contacted":{"value":"1486156224726"},"domain":{"value":"hsgem.com"},"name":{"value":"hsgem.com"},"hs_analytics_num_page_views":{"value":"0"},"hs_analytics_source_data_2":{"value":"contact-upsert"},"hs_analytics_source_data_1":{"value":"API"},"notes_next_activity_date":{"value":""},"num_notes":{"value":"1"}}}}'
+    http_version: 
+  recorded_at: Fri, 01 Sep 2017 08:34:08 GMT
 recorded_with: VCR 2.4.0
