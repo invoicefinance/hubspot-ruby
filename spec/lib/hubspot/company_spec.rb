@@ -145,19 +145,19 @@ describe Hubspot::Contact do
     end
   end
 
-  describe '.batch_update' do
+  describe '.batch_update!' do
     context 'happy' do
       cassette 'batch_update_happy'
       let(:company) { Hubspot::Company.create!("newcompany_y_#{Time.now.to_i}@hsgem.com") }
       let(:vid) { company.vid }
       let(:update_companies) do
         [
-          { 'objectId' => vid, 'properties': [{ 'name' => 'name', 'value' => 'new_name' }] }
+          { vid: vid, name: 'new_name' }
         ]
       end
 
       it 'should update all listed companies' do
-        Hubspot::Company.batch_update(update_companies)
+        Hubspot::Company.batch_update!(update_companies)
 
         sleep 2 if VCR.current_cassette.recording?
 
@@ -172,12 +172,12 @@ describe Hubspot::Contact do
       let(:vid) { company.vid }
       let(:bad_request) do
         [
-          { 'objectId' => vid, 'properties': [{ 'name' => '93741290837490812y35lghfa7o45tyglbu', 'value' => 'new_name' }] }
+          { vid: vid, y35lghfa7o45tyglbu: 'new_name' }
         ]
       end
 
       it 'should throw error upon wrong request' do
-        expect { Hubspot::Company.batch_update(bad_request) }.to raise_error Hubspot::RequestError
+        expect { Hubspot::Company.batch_update!(bad_request) }.to raise_error Hubspot::RequestError
       end
     end
 
@@ -189,21 +189,21 @@ describe Hubspot::Contact do
       let(:vid1) { company1.vid }
       let(:request) do
         [
-          { 'objectId' => vid, 'properties': [{ 'name' => 'name', 'value' => 'new_name' }] },
-          { 'objectId' => vid, 'properties': [{ 'name' => 'name', 'value' => 'new_name' }] },
-          { 'objectId' => vid1, 'properties': [{ 'name' => 'name', 'value' => 'new_name' }] }
+          { vid: vid, name: 'new_name' },
+          { vid: vid1, name: 'new_name' },
+          { vid: vid, name: 'newer_name' }
         ]
       end
 
       it 'should update in multiple batches' do
-        Hubspot::Company.batch_update(request, 2)
+        Hubspot::Company.batch_update!(request, 2)
 
         sleep 2 if VCR.current_cassette.recording?
 
         updated_company = Hubspot::Company.find_by_id(vid)
-        second_batch_company = Hubspot::Company.find_by_id(vid1)
-        expect(updated_company.name).to eq 'new_name'
-        expect(second_batch_company.name).to eq 'new_name'
+        updated_company1 = Hubspot::Company.find_by_id(vid1)
+        expect(updated_company.name).to eq 'newer_name'
+        expect(updated_company1.name).to eq 'new_name'
       end
     end
   end

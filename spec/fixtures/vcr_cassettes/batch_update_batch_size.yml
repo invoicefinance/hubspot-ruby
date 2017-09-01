@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=demo
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"newcompany_y_1504105330@hsgem.com"}]}'
+      string: '{"properties":[{"name":"name","value":"newcompany_y_1504254245@hsgem.com"}]}'
     headers:
       Content-Type:
       - application/json
@@ -21,20 +21,20 @@ http_interactions:
       Content-Length:
       - '842'
       Date:
-      - Wed, 30 Aug 2017 15:02:10 GMT
+      - Fri, 01 Sep 2017 08:24:06 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"portalId":62515,"companyId":531484204,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504105330713","timestamp":1504105330713,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504105330713","timestamp":1504105330713,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newcompany_y_1504105330@hsgem.com","timestamp":1504105330713,"source":"API","sourceId":null,"versions":[{"name":"name","value":"newcompany_y_1504105330@hsgem.com","timestamp":1504105330713,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504105330713","timestamp":1504105330713,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504105330713","timestamp":1504105330713,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+      string: '{"portalId":62515,"companyId":533094496,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504254246905","timestamp":1504254246905,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504254246905","timestamp":1504254246905,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newcompany_y_1504254245@hsgem.com","timestamp":1504254246905,"source":"API","sourceId":null,"versions":[{"name":"name","value":"newcompany_y_1504254245@hsgem.com","timestamp":1504254246905,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504254246905","timestamp":1504254246905,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504254246905","timestamp":1504254246905,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:10 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:05 GMT
 - request:
     method: post
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=demo
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"newcompany_y_1504105330@hsgem.com"}]}'
+      string: '{"properties":[{"name":"name","value":"newcompany_y_1504254245@hsgem.com"}]}'
     headers:
       Content-Type:
       - application/json
@@ -50,20 +50,20 @@ http_interactions:
       Content-Length:
       - '842'
       Date:
-      - Wed, 30 Aug 2017 15:02:11 GMT
+      - Fri, 01 Sep 2017 08:24:07 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"portalId":62515,"companyId":531301110,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504105331021","timestamp":1504105331021,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504105331021","timestamp":1504105331021,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newcompany_y_1504105330@hsgem.com","timestamp":1504105331021,"source":"API","sourceId":null,"versions":[{"name":"name","value":"newcompany_y_1504105330@hsgem.com","timestamp":1504105331021,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504105331021","timestamp":1504105331021,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504105331021","timestamp":1504105331021,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+      string: '{"portalId":62515,"companyId":533094497,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504254247157","timestamp":1504254247157,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504254247157","timestamp":1504254247157,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newcompany_y_1504254245@hsgem.com","timestamp":1504254247157,"source":"API","sourceId":null,"versions":[{"name":"name","value":"newcompany_y_1504254245@hsgem.com","timestamp":1504254247157,"source":"API","sourceVid":[]}]},"createdate":{"value":"1504254247157","timestamp":1504254247157,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504254247157","timestamp":1504254247157,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:11 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:06 GMT
 - request:
     method: post
     uri: https://api.hubapi.com/companies/v1/batch-async/update?hapikey=demo
     body:
       encoding: UTF-8
-      string: '[{"objectId":531484204,"properties":[{"name":"name","value":"new_name"}]},{"objectId":531484204,"properties":[{"name":"name","value":"new_name"}]}]'
+      string: '[{"objectId":533094496,"properties":[{"name":"name","value":"new_name"}]},{"objectId":533094497,"properties":[{"name":"name","value":"new_name"}]}]'
     headers:
       Content-Type:
       - application/json
@@ -79,20 +79,20 @@ http_interactions:
       Content-Length:
       - '0'
       Date:
-      - Wed, 30 Aug 2017 15:02:11 GMT
+      - Fri, 01 Sep 2017 08:24:07 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:11 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:06 GMT
 - request:
     method: post
     uri: https://api.hubapi.com/companies/v1/batch-async/update?hapikey=demo
     body:
       encoding: UTF-8
-      string: '[{"objectId":531301110,"properties":[{"name":"name","value":"new_name"}]}]'
+      string: '[{"objectId":533094496,"properties":[{"name":"name","value":"newer_name"}]}]'
     headers:
       Content-Type:
       - application/json
@@ -108,17 +108,17 @@ http_interactions:
       Content-Length:
       - '0'
       Date:
-      - Wed, 30 Aug 2017 15:02:11 GMT
+      - Fri, 01 Sep 2017 08:24:07 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:11 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:06 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/531484204?hapikey=demo
+    uri: https://api.hubapi.com/companies/v2/companies/533094496?hapikey=demo
     body:
       encoding: US-ASCII
       string: ''
@@ -142,19 +142,19 @@ http_interactions:
       - Accept-Encoding
       - user-agent
       Date:
-      - Wed, 30 Aug 2017 15:02:13 GMT
+      - Fri, 01 Sep 2017 08:24:09 GMT
       Content-Length:
-      - '848'
+      - '852'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"portalId":62515,"companyId":531484204,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504105331502","timestamp":1504105331502,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504105331502","timestamp":1504105331502,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"new_name","timestamp":1504105331317,"source":"API","sourceId":"CompaniesBatchMutation","versions":[{"name":"name","value":"new_name","timestamp":1504105331317,"sourceId":"CompaniesBatchMutation","source":"API","sourceVid":[]}]},"createdate":{"value":"1504105330713","timestamp":1504105330713,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504105330713","timestamp":1504105330713,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+      string: '{"portalId":62515,"companyId":533094496,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504254247815","timestamp":1504254247815,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504254247815","timestamp":1504254247815,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"newer_name","timestamp":1504254247688,"source":"API","sourceId":"CompaniesBatchMutation","versions":[{"name":"name","value":"newer_name","timestamp":1504254247688,"sourceId":"CompaniesBatchMutation","source":"API","sourceVid":[]}]},"createdate":{"value":"1504254246905","timestamp":1504254246905,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504254246905","timestamp":1504254246905,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:14 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:08 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/531301110?hapikey=demo
+    uri: https://api.hubapi.com/companies/v2/companies/533094497?hapikey=demo
     body:
       encoding: US-ASCII
       string: ''
@@ -178,14 +178,14 @@ http_interactions:
       - Accept-Encoding
       - user-agent
       Date:
-      - Wed, 30 Aug 2017 15:02:14 GMT
+      - Fri, 01 Sep 2017 08:24:10 GMT
       Content-Length:
       - '848'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"portalId":62515,"companyId":531301110,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504105331814","timestamp":1504105331814,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504105331814","timestamp":1504105331814,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"new_name","timestamp":1504105331648,"source":"API","sourceId":"CompaniesBatchMutation","versions":[{"name":"name","value":"new_name","timestamp":1504105331648,"sourceId":"CompaniesBatchMutation","source":"API","sourceVid":[]}]},"createdate":{"value":"1504105331021","timestamp":1504105331021,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504105331021","timestamp":1504105331021,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+      string: '{"portalId":62515,"companyId":533094497,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1504254247751","timestamp":1504254247751,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1504254247751","timestamp":1504254247751,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"new_name","timestamp":1504254247467,"source":"API","sourceId":"CompaniesBatchMutation","versions":[{"name":"name","value":"new_name","timestamp":1504254247467,"sourceId":"CompaniesBatchMutation","source":"API","sourceVid":[]}]},"createdate":{"value":"1504254247157","timestamp":1504254247157,"source":"API","sourceId":"API","versions":[{"name":"createdate","value":"1504254247157","timestamp":1504254247157,"sourceId":"API","source":"API","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
     http_version: 
-  recorded_at: Wed, 30 Aug 2017 15:02:14 GMT
+  recorded_at: Fri, 01 Sep 2017 08:24:08 GMT
 recorded_with: VCR 2.4.0
