@@ -10,10 +10,11 @@ module Hubspot
     CREATE_DEAL_PATH = "/deals/v1/deal"
     DEAL_PATH = "/deals/v1/deal/:deal_id"
     RECENT_UPDATED_PATH = "/deals/v1/deal/recent/modified"
-    UPDATE_DEAL_PATH = '/deals/v1/deal/:deal_id'
-    ASSOCIATE_DEAL_PATH = '/deals/v1/deal/:deal_id/associations/:OBJECTTYPE?id=:objectId'
+    UPDATE_DEAL_PATH = "/deals/v1/deal/:deal_id"
+    ASSOCIATE_DEAL_PATH = "/deals/v1/deal/:deal_id/associations/:OBJECTTYPE?id=:objectId"
     ASSOCIATED_DEAL_PATH = "/deals/v1/deal/associated/:objectType/:objectId"
     BATCH_UPDATE_PATH = "/deals/v1/batch-async/update"
+    All_DEALS_PATH = "/deals/v1/deal/paged"
 
     attr_reader :properties
     attr_reader :portal_id
@@ -49,10 +50,22 @@ module Hubspot
          Hubspot::Connection.put_json(ASSOCIATE_DEAL_PATH, params: { deal_id: deal_id, OBJECTTYPE: objecttype, objectId: object_ids}, body: {})
        end
 
-
       def find(deal_id)
         response = Hubspot::Connection.get_json(DEAL_PATH, { deal_id: deal_id })
         new(response)
+      end
+
+      # Find all deals by created date (descending)
+      # @param opts [Hash] Possible options are:
+      #    recently_updated [boolean] (for querying all accounts by modified time)
+      #    count [Integer] for pagination
+      #    offset [Integer] for pagination
+      #    properties Hash for the properties that you want
+      # @return [Array] Array of Hubspot::Deal records
+      def all(opts={})
+        with_include_associations = opts.merge(includeAssociations: true)
+        response = Hubspot::Connection.get_json(All_DEALS_PATH, with_include_associations)
+        response['deals'].compact.map { |deal| new(deal) }
       end
 
       # Find recent updated deals.
