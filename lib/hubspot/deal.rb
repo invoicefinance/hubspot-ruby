@@ -13,6 +13,7 @@ module Hubspot
     UPDATE_DEAL_PATH = '/deals/v1/deal/:deal_id'
     ASSOCIATE_DEAL_PATH = '/deals/v1/deal/:deal_id/associations/:OBJECTTYPE?id=:objectId'
     ASSOCIATED_DEAL_PATH = "/deals/v1/deal/associated/:objectType/:objectId"
+    BATCH_UPDATE_PATH = "/deals/v1/batch-async/update"
 
     attr_reader :properties
     attr_reader :portal_id
@@ -47,7 +48,7 @@ module Hubspot
          object_ids = (company_ids.any? ? company_ids : vids).join('&id=')
          Hubspot::Connection.put_json(ASSOCIATE_DEAL_PATH, params: { deal_id: deal_id, OBJECTTYPE: objecttype, objectId: object_ids}, body: {})
        end
- 
+
 
       def find(deal_id)
         response = Hubspot::Connection.get_json(DEAL_PATH, { deal_id: deal_id })
@@ -62,7 +63,7 @@ module Hubspot
         response = Hubspot::Connection.get_json(RECENT_UPDATED_PATH, opts)
         response['results'].map { |d| new(d) }
       end
-      
+
       # Find all deals associated to a company
       # {http://developers.hubspot.com/docs/methods/deals/get-associated-deals}
       # @param company [Hubspot::Company] the company
@@ -74,6 +75,20 @@ module Hubspot
         response["results"].map { |deal_id| find(deal_id) }
       end
 
+      def batch_update!(deals, batch_size = 50)
+        deals.in_groups_of(batch_size) do |group|
+          query = group.compact.map do |deal|
+            deal_hash = deal.with_indifferent_access
+
+            {
+              'objectId' => deal_hash[:deal_id],
+              'properties' => Hubspot::Utils.hash_to_properties(deal_hash.except(:deal_id), key_name: 'name')
+            }
+          end
+          Hubspot::Connection
+            .post_json(BATCH_UPDATE_PATH, params: {}, body: query)
+        end
+      end
     end
 
     # Archives the contact in hubspot
