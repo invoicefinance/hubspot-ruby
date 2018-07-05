@@ -18,6 +18,7 @@ module Hubspot
     DESTROY_CONTACT_PATH         = '/contacts/v1/contact/vid/:contact_id'
     CONTACTS_PATH                = '/contacts/v1/lists/all/contacts/all'
     RECENTLY_UPDATED_PATH        = '/contacts/v1/lists/recently_updated/contacts/recent'
+    RECENTLY_CREATED_PATH        = '/contacts/v1/lists/all/contacts/recent'
     CREATE_OR_UPDATE_PATH        = '/contacts/v1/contact/createOrUpdate/email/:contact_email'
     QUERY_PATH                   = '/contacts/v1/search/query'
 
@@ -33,11 +34,15 @@ module Hubspot
 
       # {https://developers.hubspot.com/docs/methods/contacts/get_contacts}
       # {https://developers.hubspot.com/docs/methods/contacts/get_recently_updated_contacts}
+      # {https://developers.hubspot.com/docs/methods/contacts/get_recently_created_contacts}
       def all(opts={})
         recent = opts.delete(:recent) { false }
+        recent_created = opts.delete(:recent_created) { false }
         paged = opts.delete(:paged) { false }
         path, opts =
-        if recent
+        if recent_created
+          [RECENTLY_CREATED_PATH, Hubspot::ContactProperties.add_default_parameters(opts)]
+        elsif recent
           [RECENTLY_UPDATED_PATH, Hubspot::ContactProperties.add_default_parameters(opts)]
         else
           [CONTACTS_PATH, opts]
@@ -59,26 +64,28 @@ module Hubspot
         contact
       end
 
-      # NOTE: Performance is best when calls are limited to 100 or fewer contacts
+      # NOTE: It will now handle bigger loads
       # {https://developers.hubspot.com/docs/methods/contacts/batch_create_or_update}
-      def create_or_update!(contacts)
-        query = contacts.map do |ch|
-          contact_hash = ch.with_indifferent_access
-          contact_param = {
-            properties: Hubspot::Utils.hash_to_properties(contact_hash.except(:vid))
-          }
-          if contact_hash[:vid]
-            contact_param.merge!(vid: contact_hash[:vid])
-          elsif contact_hash[:email]
-            contact_param.merge!(email: contact_hash[:email])
-          else
-            raise Hubspot::InvalidParams, 'expecting vid or email for contact'
+      def create_or_update!(contacts, batch_size = 50)
+        contacts.in_groups_of(batch_size) do |group_of_contacts|
+          query = group_of_contacts.compact.map do |ch|
+            contact_hash = ch.with_indifferent_access
+            contact_param = {
+              properties: Hubspot::Utils.hash_to_properties(contact_hash.except(:vid))
+            }
+            if contact_hash[:vid]
+              contact_param.merge!(vid: contact_hash[:vid])
+            elsif contact_hash[:email]
+              contact_param.merge!(email: contact_hash[:email])
+            else
+              raise Hubspot::InvalidParams, 'expecting vid or email for contact'
+            end
+            contact_param
           end
-          contact_param
+          Hubspot::Connection.post_json(BATCH_CREATE_OR_UPDATE_PATH,
+                                        params: {},
+                                        body: query)
         end
-        Hubspot::Connection.post_json(BATCH_CREATE_OR_UPDATE_PATH,
-                                      params: {},
-                                      body: query)
       end
 
       # NOTE: problem with batch api endpoint

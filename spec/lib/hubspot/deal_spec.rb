@@ -1,7 +1,12 @@
 describe Hubspot::Deal do
+  let(:portal_id) { 62515 }
+  let(:company_id) { 8954037 }
+  let(:vid) { 27136 }
+  let(:amount) { '30' }
+
   let(:example_deal_hash) do
     VCR.use_cassette("deal_example") do
-      HTTParty.get("https://api.hubapi.com/deals/v1/deal/3?hapikey=demo&portalId=62515").parsed_response
+      HTTParty.get("https://api.hubapi.com/deals/v1/deal/3?hapikey=demo&portalId=#{portal_id}").parsed_response
     end
   end
 
@@ -10,27 +15,63 @@ describe Hubspot::Deal do
   describe "#initialize" do
     subject{ Hubspot::Deal.new(example_deal_hash) }
     it  { should be_an_instance_of Hubspot::Deal }
-    its (:portal_id) { should == 62515 }
+    its (:portal_id) { should == portal_id }
     its (:deal_id) { should == 3 }
   end
 
   describe ".create!" do
     cassette "deal_create"
-    subject { Hubspot::Deal.create!(62515, [8954037], [27136], {}) }
+    subject { Hubspot::Deal.create!(portal_id, [company_id], [vid], {}) }
     its(:deal_id)     { should_not be_nil }
-    its(:portal_id)   { should eql 62515 }
-    its(:company_ids) { should eql [8954037]}
-    its(:vids)        { should eql [27136]}
+    its(:portal_id)   { should eql portal_id }
+    its(:company_ids) { should eql [company_id]}
+    its(:vids)        { should eql [vid]}
   end
 
   describe ".find" do
     cassette "deal_find"
-    let(:deal) {Hubspot::Deal.create!(62515, [8954037], [27136], { amount: 30})}
+    let(:deal) {Hubspot::Deal.create!(portal_id, [company_id], [vid], { amount: amount})}
 
     it 'must find by the deal id' do
       find_deal = Hubspot::Deal.find(deal.deal_id)
       find_deal.deal_id.should eql deal.deal_id
-      find_deal.properties["amount"].should eql "30"
+      find_deal.properties["amount"].should eql amount
+    end
+  end
+
+  describe '.find_by_company' do
+    cassette 'deal_find_by_company'
+    let(:company) { Hubspot::Company.create!('Test Company') }
+    let(:deal) { Hubspot::Deal.create!(portal_id, [company.vid], [vid], { amount: amount }) }
+
+    it 'returns company deals' do
+      deals = Hubspot::Deal.find_by_company(company)
+      deals.first.deal_id.should eql deal.deal_id
+      deals.first.properties['amount'].should eql amount
+    end
+  end
+
+  describe '.all' do
+    cassette 'find_all_deals'
+
+    let(:deal) do
+      Hubspot::Deal.find(18706906)
+    end
+    let(:deal2) do
+      Hubspot::Deal.find(18706976)
+    end
+
+    it 'must be able to find all deals' do
+      deals = Hubspot::Deal.all(recently_updated: false, limit: 2, offset: 1, properties: :amount)
+
+      first = deals.first
+      last = deals.last
+      
+      expect(first).to be_a Hubspot::Deal
+      expect(first.properties['amount']).to eql deal.properties['amount']
+
+      expect(last).to be_a Hubspot::Deal
+      expect(last.properties['amount']).to eql deal2.properties['amount']
     end
   end
 
@@ -65,10 +106,107 @@ describe Hubspot::Deal do
     end
   end
 
+  describe '.batch_update!' do
+    context 'happy' do
+      cassette 'deal_batch_update_happy'
+      let(:company) do
+        Hubspot::Company.create!('test')
+      end
+      let(:contact) do
+        Hubspot::Contact.create!("testingapis#{Time.now.to_i}@hubspot.com")
+      end
+      let(:deal) do
+        Hubspot::Deal.create!(62_515, [company.vid], [contact.vid], amount: 30)
+      end
+      let(:query) do
+        [
+          {
+            deal_id: deal.deal_id,
+            amount: 100
+          }
+        ]
+      end
+
+      it 'correctly batch updates the deal' do
+        Hubspot::Deal.batch_update!(query)
+
+        updated_deal = Hubspot::Deal.find(deal.deal_id)
+        expect(updated_deal.properties[:amount]).to eq '100'
+      end
+    end
+
+    context 'unhappy' do
+      cassette 'deal_batch_update_unhappy'
+      let(:company) do
+        Hubspot::Company.create!('test')
+      end
+      let(:contact) do
+        Hubspot::Contact.create!("testingapis#{Time.now.to_i}@hubspot.com")
+      end
+      let(:deal) do
+        Hubspot::Deal.create!(62_515, [company.vid], [contact.vid], amount: 30)
+      end
+      let(:query) do
+        [
+          {
+            deal_id: deal.deal_id,
+            a_mount: 100
+          }
+        ]
+      end
+
+      it 'correctly batch updates the deal' do
+        expect { Hubspot::Deal.batch_update!(query) }
+          .to raise_error Hubspot::RequestError
+      end
+    end
+
+    context 'should handle batch in multiple groups' do
+      cassette 'deal_batch_update_groups'
+      let(:company) do
+        Hubspot::Company.create!('test')
+      end
+      let(:contact) do
+        Hubspot::Contact.create!("testingapis#{Time.now.to_i}@hubspot.com")
+      end
+      let(:deal) do
+        Hubspot::Deal.create!(62_515, [company.vid], [contact.vid], amount: 30)
+      end
+      let(:deal1) do
+        Hubspot::Deal.create!(62_515, [company.vid], [contact.vid], amount: 40)
+      end
+      let(:query) do
+        [
+          {
+            deal_id: deal.deal_id,
+            amount: 100
+          },
+          {
+            deal_id: deal1.deal_id,
+            amount: 120
+          },
+          {
+            deal_id: deal.deal_id,
+            amount: 120
+          }
+        ]
+      end
+
+      it 'correctly batch updates the deal' do
+        Hubspot::Deal.batch_update!(query, 2)
+
+        updated_deal = Hubspot::Deal.find(deal.deal_id)
+        updated_deal1 = Hubspot::Deal.find(deal1.deal_id)
+        expect(updated_deal.properties[:amount]).to eq '120'
+        expect(updated_deal1.properties[:amount]).to eq '120'
+      end
+    end
+  end
+
   describe '#destroy!' do
     cassette 'destroy_deal'
 
-    let(:deal) {Hubspot::Deal.create!(62515, [8954037], [27136], {amount: 30})}
+    let(:deal) {Hubspot::Deal.create!(portal_id, [company_id], [vid], {amount: amount})}
 
     it 'should remove from hubspot' do
       pending

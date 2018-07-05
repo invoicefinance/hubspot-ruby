@@ -62,17 +62,41 @@ describe Hubspot::Contact do
   describe ".find_by_domain" do
     context 'given a domain' do
       cassette "company_find_by_domain"
-      subject{ Hubspot::Company.find_by_domain("hubspot.com") }
+      subject(:companies) { Hubspot::Company.find_by_domain("example.com") }
+
+      context "when a company is found" do
+        it { should be_an_instance_of Array }
+        it { should_not be_empty }
+
+        it 'must contain all available properties' do
+          companies[0..9].each do |company|
+            expect(company.properties).to eql Hubspot::Company.find_by_id(company.vid).properties
+          end
+        end
+      end
+
+      context "when a company cannot be found" do
+        subject { Hubspot::Company.find_by_domain("asdf1234baddomain.com") }
+        it { should be_an_instance_of Array }
+        it { should be_empty }
+      end
+    end
+
+    context 'given a domain and parameters' do
+      cassette 'company_find_by_domain_with_params'
+      subject(:companies) { Hubspot::Company.find_by_domain("example.com", limit: 2, properties: ["name", "createdate"], offset_company_id: 117004411) }
 
       context "when a company is found" do
         it{ should be_an_instance_of Array }
         it{ should_not be_empty }
-      end
 
-      context "when a company cannot be found" do
-        subject{Hubspot::Company.find_by_domain("asdf1234baddomain.com")}
-        it{ should be_an_instance_of Array }
-        it{ should be_empty }
+        it 'must use the parameters to search' do
+          expect(companies.size).to eql 2
+          expect(companies.first['name']).to be_a_kind_of String
+          expect(companies.first['createdate']).to be_a_kind_of String
+          expect(companies.first['domain']).to be_nil
+          expect(companies.first['hs_lastmodifieddate']).to be_nil
+        end
       end
     end
   end
@@ -117,6 +141,69 @@ describe Hubspot::Contact do
 
         expect(last).to be_a Hubspot::Company
         expect(last.vid).to eql 359899290
+      end
+    end
+  end
+
+  describe '.batch_update!' do
+    context 'happy' do
+      cassette 'batch_update_happy'
+      let(:company) { Hubspot::Company.create!("newcompany_y_#{Time.now.to_i}@hsgem.com") }
+      let(:vid) { company.vid }
+      let(:update_companies) do
+        [
+          { vid: vid, name: 'new_name' }
+        ]
+      end
+
+      it 'should update all listed companies' do
+        Hubspot::Company.batch_update!(update_companies)
+
+        sleep 2 if VCR.current_cassette.recording?
+
+        updated_company = Hubspot::Company.find_by_id(vid)
+        expect(updated_company.name).to eq 'new_name'
+      end
+    end
+
+    context 'unhappy' do
+      cassette 'batch_update_unhappy'
+      let(:company) { Hubspot::Company.create!("newcompany_y_#{Time.now.to_i}@hsgem.com") }
+      let(:vid) { company.vid }
+      let(:bad_request) do
+        [
+          { vid: vid, y35lghfa7o45tyglbu: 'new_name' }
+        ]
+      end
+
+      it 'should throw error upon wrong request' do
+        expect { Hubspot::Company.batch_update!(bad_request) }.to raise_error Hubspot::RequestError
+      end
+    end
+
+    context 'batch_size' do
+      cassette 'batch_update_batch_size'
+      let(:company) { Hubspot::Company.create!("newcompany_y_#{Time.now.to_i}@hsgem.com") }
+      let(:vid) { company.vid }
+      let(:company1) { Hubspot::Company.create!("newcompany_y_#{Time.now.to_i}@hsgem.com") }
+      let(:vid1) { company1.vid }
+      let(:request) do
+        [
+          { vid: vid, name: 'new_name' },
+          { vid: vid1, name: 'new_name' },
+          { vid: vid, name: 'newer_name' }
+        ]
+      end
+
+      it 'should update in multiple batches' do
+        Hubspot::Company.batch_update!(request, 2)
+
+        sleep 2 if VCR.current_cassette.recording?
+
+        updated_company = Hubspot::Company.find_by_id(vid)
+        updated_company1 = Hubspot::Company.find_by_id(vid1)
+        expect(updated_company.name).to eq 'newer_name'
+        expect(updated_company1.name).to eq 'new_name'
       end
     end
   end
